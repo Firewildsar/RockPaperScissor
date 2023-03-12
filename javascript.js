@@ -9,7 +9,6 @@ store computer choice in variable choice
 */
 let playerScore = 0;
 let computerScore = 0;
-
 let message = "";
 let result = ""
 
@@ -38,32 +37,47 @@ function getComputerChoice(){
 function playRound(playerSelection,computerSelection){
     if (playerSelection == "scissor"){
         if (computerSelection == "paper"){
+            playerScore += 1;
             roundResult = "You win! Scissor beats paper!"; 
         } else if (computerSelection == "rock"){
+            computerScore += 1;
             roundResult = "You lose! Rock beats scissor!";
         } else {
+            playerScore += 0;
+            computerScore += 0;
             roundResult = "You tie! Try again!";
         }
     }
     if (playerSelection == "rock"){
         if (computerSelection == "scissor"){
+            playerScore += 1;
             roundResult = "You win! Rock beats scissor!";
         } else if (computerSelection == "paper"){
+            computerScore += 1;
             roundResult = "You lose! Paper beats rock!";
         } else {
+            playerScore += 0;
+            computerScore += 0;
             roundResult = "You tie! Try again!";
         }
     }
     if (playerSelection == "paper"){
         if (computerSelection == "rock"){
+            playerScore += 1;
             roundResult = "You win! Paper beats rock!";
         } else if (computerSelection == "scissor"){
+            computerScore += 1;
             roundResult = "You lose! Scissor beats paper!";
         } else {
+            playerScore += 0;
+            computerScore += 0;
             roundResult = "You tie! Try again!";
         }
     }
     console.log(roundResult)
+    console.log(computerScore)
+    console.log(playerScore)
+    
     return roundResult
     }
  
