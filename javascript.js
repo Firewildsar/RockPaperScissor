@@ -29,9 +29,6 @@ function getComputerChoice(){
 }
 
 
-
-
-
 function playRound(playerSelection,computerSelection){
     if (playerSelection == "scissor" & computerSelection == "rock"){
         return "You lose! Rock beats Scissor!"
@@ -54,6 +51,14 @@ function playRound(playerSelection,computerSelection){
     } else {
         return "Not valid"
     }
+}
+
+function game(){
+    for (let i = 0; i< 5; i++){
+        playRound()
+
+    }
+
 }
 
 
